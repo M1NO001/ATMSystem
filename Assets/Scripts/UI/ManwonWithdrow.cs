@@ -6,6 +6,7 @@ public class ManwonWithdrow : MonoBehaviour
 {
     public GameObject CashUI;
     public GameObject UserInfoUI;
+    public GameObject PopUp;
     // Start is called before the first frame update
     private void Start()
     {
@@ -19,9 +20,16 @@ public class ManwonWithdrow : MonoBehaviour
     // Update is called once per frame
     public void WithdrowManwon()
     {
-        GameManager.Instance.defaultCash += 10000;
-        GameManager.Instance.defaultBalance -= 10000;
-        CashUI.GetComponent<CashUI>().ChangeCashText(GameManager.Instance.defaultCash);
-        UserInfoUI.GetComponent<UserInfoUI>().ChangeBalanceText(GameManager.Instance.defaultBalance);
+        if (GameManager.Instance.defaultBalance < 10000)
+        {
+            PopUp.SetActive(true);
+        }
+        else
+        {
+            GameManager.Instance.defaultCash += 10000;
+            GameManager.Instance.defaultBalance -= 10000;
+            CashUI.GetComponent<CashUI>().ChangeCashText(GameManager.Instance.defaultCash);
+            UserInfoUI.GetComponent<UserInfoUI>().ChangeBalanceText(GameManager.Instance.defaultBalance);
+        }
     }
 }

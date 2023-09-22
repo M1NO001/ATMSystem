@@ -6,6 +6,7 @@ public class SamManwonDeposit : MonoBehaviour
 {
     public GameObject CashUI;
     public GameObject UserInfoUI;
+    public GameObject PopUp;
     // Start is called before the first frame update
     private void Start()
     {
@@ -16,12 +17,18 @@ public class SamManwonDeposit : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     public void DepositSamManwon()
     {
-        GameManager.Instance.defaultCash -= 30000;
-        GameManager.Instance.defaultBalance += 30000;
-        CashUI.GetComponent<CashUI>().ChangeCashText(GameManager.Instance.defaultCash);
-        UserInfoUI.GetComponent<UserInfoUI>().ChangeBalanceText(GameManager.Instance.defaultBalance);
+        if (GameManager.Instance.defaultCash < 30000)
+        {
+            PopUp.SetActive(true);
+        }
+        else
+        {
+            GameManager.Instance.defaultCash -= 30000;
+            GameManager.Instance.defaultBalance += 30000;
+            CashUI.GetComponent<CashUI>().ChangeCashText(GameManager.Instance.defaultCash);
+            UserInfoUI.GetComponent<UserInfoUI>().ChangeBalanceText(GameManager.Instance.defaultBalance);
+        }
     }
 }

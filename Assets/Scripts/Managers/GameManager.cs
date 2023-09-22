@@ -11,7 +11,7 @@ public class GameManager: MonoBehaviour
     public string UserName { get; private set; }
     public int defaultCash { get; set; }
     public int defaultBalance { get; set; }
-
+    
 
     private void Awake()
     {
@@ -38,5 +38,15 @@ public class GameManager: MonoBehaviour
         {
             MainSceneUI = Instantiate(MainSceneUI, transform.position, Quaternion.identity);
         }
+    }
+    public void Deposit(int money)
+    {
+        defaultBalance += money;
+        defaultCash -= money;
+    }
+    public void WithDrow(int money)
+    {
+        defaultBalance -= money;
+        defaultCash += money;
     }
 }
