@@ -6,5 +6,5 @@ public class UserInfo : MonoBehaviour
 {
     public string UserName = "¹Ú¹ÎÈ£";
     public int cash = 100000;
-    public int balance = 50000;
+    public int balance= 50000;
 }
