@@ -4096,7 +4096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depositBtn: {fileID: 1752479388391576937}
-  txtInputMoney: {fileID: 0}
+  txtInputMoney: {fileID: 4027296981194751365}
   PopUpUI: {fileID: 7402040236159080110}
   CashUI: {fileID: 6901811417003359251}
   UserInfo: {fileID: 3058254866565241867}
@@ -6328,7 +6328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   depositBtn: {fileID: 6910184476688928385}
-  txtInputMoney: {fileID: 0}
+  txtInputMoney: {fileID: 819354900274085920}
   PopUpUI: {fileID: 7402040236159080110}
   CashUI: {fileID: 6901811417003359251}
   UserInfo: {fileID: 3058254866565241867}

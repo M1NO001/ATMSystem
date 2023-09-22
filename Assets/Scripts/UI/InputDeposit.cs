@@ -6,7 +6,7 @@ using TMPro;
 public class InputDeposit : MonoBehaviour
 {
     public Button depositBtn;
-    public InputField txtInputMoney;
+    public TMP_InputField txtInputMoney;
     public GameObject PopUpUI;
     public GameObject CashUI;
     public GameObject UserInfo;
